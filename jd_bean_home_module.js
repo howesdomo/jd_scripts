@@ -28,8 +28,9 @@ log4js.configure(log4js_config);
 var logFile = log4js.getLogger('log_file');
 
 function myLog (m) {
-  console.log(m);
-  logFile.info(m);
+  var msg = "京豆" + m;
+  console.log(msg);
+  logFile.info(msg);
 }
 
 const $ = new Env('领京豆额外奖励');

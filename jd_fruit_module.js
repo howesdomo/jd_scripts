@@ -34,8 +34,9 @@ log4js.configure(log4js_config);
 var logFile = log4js.getLogger('log_file');
 
 function myLog (m) {
-  console.log(m);
-  logFile.info(m);
+  var msg = '东东农场' + m;
+  console.log(msg);
+  logFile.info(msg);
 }
 
 let cookiesArr = [], cookie = '', jdFruitShareArr = [], isBox = false, notify, newShareCodes, allMessage = '';
@@ -134,16 +135,18 @@ async function jdFruit() {
       await duck();
       await doTenWaterAgain();//再次浇水
       await predictionFruit();//预测水果成熟时间
+      myLog(`账号${$.nickName || $.UserName}执行完毕`);
     } else {
       console.log(`初始化农场数据异常, 请登录京东 app查看农场0元水果功能是否正常,农场初始化数据: ${JSON.stringify($.farmInfo)}`);
       message = `【数据异常】请手动登录京东app查看此账号${$.name}是否正常`;
     }
   } catch (e) {
-    console.log(`任务执行异常，请检查执行日志 ‼️‼️`);
+    console.log(`任务执行异常，请检查执行日志 ‼️‼️`);    
     $.logErr(e);
     const errMsg = `京东账号${$.index} ${$.nickName || $.UserName}\n任务执行异常，请检查执行日志 ‼️‼️`;
     if ($.isNode()) await notify.sendNotify(`${$.name}`, errMsg);
     $.msg($.name, '', `${errMsg}`)
+    myLog(errMsg);
   }
   await showMsg();
 }
