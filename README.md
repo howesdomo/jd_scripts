@@ -1,19 +1,27 @@
-# jd_scripts
+# 使用方式
 
-> * 无内置shareCodes
-> * 使用助力池
+1.配置 jdCookies.js
 
-# Warning
+~~~
+// 此处填写京东账号cookie, 多个账号为例子
+let CookieJDs = [
+	'pt_key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX; pt_pin=jd账号1;',
+	'pt_key=yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy; pt_pin=jd账号2;'
+]
+~~~
 
-> * 带助力功能的脚本要使用本仓库的，其他仓库的没有对接助力池
 
-> * IOS三件套在仓库内有订阅配置文件
 
-> * 新脚本使用[TypeScript](https://www.tslang.cn/)
+2.配置批量运行脚本
 
-# whoami
+~~~
+目前配置了京豆与东东农场批量运行脚本
+~~~
 
-```typescript
-let name: string = "JDHelloWorld.TS";
-console.log(name);
+
+
+3.运行批量运行脚本
+
+```
+ts-node main.ts
 ```
