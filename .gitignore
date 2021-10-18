@@ -12,3 +12,4 @@
 .DS_Store
 /tools/account.json
 /utils/exceptCookie.json
+/log
