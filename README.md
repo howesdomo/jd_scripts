@@ -1,6 +1,6 @@
 # 使用方式
 
-1.配置 jdCookies.js
+1.配置 jdCookie.js
 
 ~~~
 // 此处填写京东账号cookie, 多个账号为例子
