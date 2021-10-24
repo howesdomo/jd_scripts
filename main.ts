@@ -34,8 +34,8 @@ jd_bean_home_module.run();
 countMinutes++;
 myLog("每 60 分钟运行 - 东东农场", countMinutes);
 jd_fruit_module.run();
-myLog("每 60 分钟运行 - 京喜牧场", countMinutes);
-jd_jxmc_module.run();
+// myLog("每 60 分钟运行 - 京喜牧场", countMinutes);
+// jd_jxmc_module.run();
 
 // 未测试
 //cfd.run();
@@ -61,8 +61,8 @@ setInterval
     countMinutes++;    
     myLog("每 60 分钟运行 - 东东农场", countMinutes);
     await jd_fruit_module.run();
-    myLog("每 60 分钟运行 - 京喜牧场", countMinutes);
-    await jd_jxmc_module.run();
+    // myLog("每 60 分钟运行 - 京喜牧场", countMinutes);
+    // await jd_jxmc_module.run();
   },
   1000 * 60 * 60 // 每 60 分钟执行一次
 );
