@@ -74,6 +74,7 @@ var run = async function() {
         // console.log(`\n******开始【京东账号${$.index}】${$.nickName || $.UserName}*********\n`);
         myLog(`\n开始【京东账号${$.index}】${$.nickName || $.UserName}\n`);
         await jdBeanHome();
+        myLog(`\n结束【京东账号${$.index}】${$.nickName || $.UserName}\n`);
       }
     }
   }
